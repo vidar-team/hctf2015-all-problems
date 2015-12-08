@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root1>
+    <user>
+        <username name='user1'>user1</username>
+        <key>KEY:1</key>
+        <username name='user2'>user2</username>
+        <key>KEY:2</key>
+        <username name='user3'>user3</username>
+        <key>KEY:3</key>
+        <username name='user4'>user4</username>
+        <key>KEY:4</key>
+        <username name='user5'>user5</username>
+        <key>KEY:5</key>
+        <username name='user6'>user6</username>
+        <key>KEY:6</key>
+        <username name='user7'>user7</username>
+        <key>KEY:7</key>
+        <username name='user8'>user8</username>
+        <key>KEY:8</key>
+        <username name='user9'>user9</username>
+        <key>KEY:9</key>
+    </user>
+    <hctfadmin>    
+        <username name='hctf1'>hctf</username>
+        <key>flag:hctf{Dd0g_fac3_t0_k3yboard233}</key>
+    </hctfadmin>
+</root1>
