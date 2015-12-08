@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hello, {{ name }}</title>
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h1>Hello, {{ name }}</h1>
+				<button id="logout" style="display:none"><a href="/logout">logout</a></button>
+				<form action="{{ name+'/upload'}}" method="post" enctype="multipart/form-data">
+					<input type="file" name="file" /><br />
+					<label for="code">验证码: </label>
+					<input name="code" id="code" type="text">
+					<img src="/code" id="img" alt="" />
+					<input type="hidden" name="token" id="token" value="{{ token }}">
+					<input type="submit" value="上传" />
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<table class="table table-striped">
+					<h2 class="page-header">查看 Code</h2>
+					<tr>
+						<th>文件名</th>
+						<th>大小</th>
+						<th>创建时间</th>
+						<!--<th>修改时间</th>-->
+					</tr>
+					{% for x in data %}
+					<tr>
+						<td><a id="filename" href="{{ name+'/uploadfile/'+data[x].name }}">{{ data[x].name }}</a></td>
+						<td><p>{{ data[x].size }}<b> Bytes</b></p></td>
+						<td><p>{{ data[x].ctime }}</p></td>
+						<!--<td><p>{{ data[x].atime }}</p></td>-->
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+		<script src="/static/js/jquery-1.11.3.min.js"></script>
+	</body>
+<script type="text/javascript">
+$('#user').click(function(){
+	$('#logout').show();
+});
+function fresh(){
+	var ran = Math.random();
+	$('#img').attr('src', "/code?r="+ran);
+}
+$('#img').click(function(){fresh()});
+</script>
+</html>
+
