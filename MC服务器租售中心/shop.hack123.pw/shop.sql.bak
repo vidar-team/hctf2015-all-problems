@@ -1,0 +1,45 @@
+DROP DATABASE IF EXISTS mcshop;
+
+CREATE DATABASE mcshop DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+# 管理员表
+CREATE TABLE mcshop.mcshop_admin (
+) ENGINE = InnoDB;
+
+INSERT INTO mcshop.mcshop_admin (id, username, password, email, token, level)  VALUES
+  # please change the password to your own!!!
+  ( # password: mcshop_admin!@#
+    1,'mcshop_admin','6471ed64f102429d4bdfdcd3840645ca','mcshop_admin@hack123.xyz',
+    'nUWg5R3M7IxA3lfZk4VT0cgsC9saUBBSU55YCxl3FLUr4FwQEV4Zq1mIvfQzo3DN','0'),
+  ( # password: mcshop_sale!@#
+    2, 'mcshop_sale', '4909ccbd5734add765b4be6668f8c48c', 'mcshop_sale@hack123.xyz',
+    'QaJuOdcB9xN1BFLfbk98D8jMLO7VaOZkpTyFCqrWL2nF718bp9sS4ACsh6POnhlG','1'
+  );
+
+# 用户表
+CREATE TABLE mcshop.mcshop_user (
+) ENGINE = InnoDB;
+
+# delete the test data when you use this sql file in product env !!!
+INSERT INTO mcshop.mcshop_user VALUES (
+    1, 'test', '309031d05eb343448b725b09a3635f13','test@test.com',
+    '7ClEs9RBtKJEuFSrxjpSLkNAqcFPc90Bh5eTfd0aj3V8jJWmvQzKBxjT56rhYbmp',
+    '999999','2348'
+);
+
+# 服务器列表
+CREATE TABLE mcshop.server_list (
+  PRIMARY KEY (id)
+) ENGINE = InnoDB;
+
+# 购物车表
+CREATE TABLE mcshop.cart (
+) ENGINE = InnoDB;
+
+# flag表
+CREATE TABLE mcshop.flag (
+  flag VARCHAR(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE = InnoDB;
+
+# 你们谁把表结构给删了，老板是不是你干的？！
+
