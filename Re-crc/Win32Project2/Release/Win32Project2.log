@@ -1,0 +1,18 @@
+﻿生成启动时间为 2015/12/8 19:51:10。
+     1>项目“D:\nameless\hctf2015\hctf2015-all-problems\Re-crc\Win32Project2\Win32Project2.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Ox /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "源.cpp"
+         源.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /l"0x0409" /nologo /fo"Release\Resource.res" Resource.rc 
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\nameless\hctf2015\hctf2015-all-problems\Re-crc\Release\Win32Project2.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\nameless\hctf2015\hctf2015-all-problems\Re-crc\Release\Win32Project2.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\nameless\hctf2015\hctf2015-all-problems\Re-crc\Release\Win32Project2.lib" /MACHINE:X86 /SAFESEH Release\Resource.res
+         "Release\源.obj"
+         正在生成代码
+         已完成代码的生成
+         Win32Project2.vcxproj -> D:\nameless\hctf2015\hctf2015-all-problems\Re-crc\Release\Win32Project2.exe
+     1>已完成生成项目“D:\nameless\hctf2015\hctf2015-all-problems\Re-crc\Win32Project2\Win32Project2.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.09
