@@ -1,0 +1,496 @@
+filename:       /tmp/flagflagflaggogogo.php
+function name:  (null)
+number of ops:  33
+compiled vars:  !0 = $target1, !1 = $target2, !2 = $getFlag, !3 = $echoFlag, !4 = $getUserInfo, !5 = $checkTarget1, !6 = $flag, !7 = $cbc_key, !8 = $cbc_iv
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   2     0  E >   INCLUDE_OR_EVAL                                          '.%2Fflag.php', REQUIRE_ONCE
+   4     1        ASSIGN                                                   !0, <bool>
+   5     2        ASSIGN                                                   !1, <bool>
+   7     3        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a064'
+  12     4        ASSIGN                                                   !2, ~3
+  14     5        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a15b'
+  19     6        ASSIGN                                                   !3, ~5
+  21     7        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a1ce'
+  35     8        ASSIGN                                                   !4, ~7
+  37     9        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a360'
+  91    10        ASSIGN                                                   !5, ~9
+  93    11        INIT_FCALL_BY_NAME                                       !5
+        12        DO_FCALL_BY_NAME                              0          
+  95    13      > JMPZ_EX                                          ~12     !0, ->15
+        14    >   BOOL                                             ~12     !1
+        15    > > JMPZ                                                     ~12, ->32
+  96    16    >   INIT_FCALL_BY_NAME                                       !2
+        17        SEND_VAR                                                 !6
+        18        SEND_VAR                                                 !7
+        19        SEND_VAR                                                 !8
+        20        DO_FCALL_BY_NAME                              3  $13     
+        21        ASSIGN                                                   !6, $13
+  97    22        INIT_FCALL_BY_NAME                                       !3
+        23        SEND_VAR                                                 !6
+        24        DO_FCALL_BY_NAME                              1          
+  98    25        INIT_FCALL_BY_NAME                                       !3
+        26        SEND_VAR                                                 !8
+        27        DO_FCALL_BY_NAME                              1          
+  99    28        INIT_FCALL_BY_NAME                                       !3
+        29        SEND_VAR                                                 !7
+        30        DO_FCALL_BY_NAME                              1          
+ 100    31      > JMP                                                      ->32
+ 102    32    > > RETURN                                                   1
+
+branch: #  0; line:     2-   95; sop:     0; eop:    13; out1:  14; out2:  15
+branch: # 14; line:    95-   95; sop:    14; eop:    14; out1:  15
+branch: # 15; line:    95-   95; sop:    15; eop:    15; out1:  16; out2:  32
+branch: # 16; line:    96-  100; sop:    16; eop:    31; out1:  32
+branch: # 32; line:   102-  102; sop:    32; eop:    32; out1:  -2
+path #1: 0, 14, 15, 16, 32, 
+path #2: 0, 14, 15, 32, 
+path #3: 0, 15, 16, 32, 
+path #4: 0, 15, 32, 
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a06:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  9
+compiled vars:  !0 = $flag, !1 = $cbc_key, !2 = $cbc_iv, !3 = $encFlag
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   7     0  E >   RECV                                             !0      
+         1        RECV                                             !1      
+         2        RECV                                             !2      
+   8     3        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a098'
+  10     4        ASSIGN                                                   !3, ~0
+  11     5        INIT_FCALL_BY_NAME                                       !3
+         6        DO_FCALL_BY_NAME                              0  $2      
+         7      > RETURN                                                   $2
+  12     8*     > RETURN                                                   null
+
+branch: #  0; line:     7-   12; sop:     0; eop:     8
+path #1: 0, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a06
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a09:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  18
+compiled vars:  !0 = $flag, !1 = $cbc_key, !2 = $cbc_iv
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   8     0  E >   FETCH_R                      static              $0      'flag'
+         1        ASSIGN                                                   !0, $0
+         2        FETCH_R                      static              $2      'cbc_key'
+         3        ASSIGN                                                   !1, $2
+         4        FETCH_R                      static              $4      'cbc_iv'
+         5        ASSIGN                                                   !2, $4
+   9     6        FETCH_CONSTANT                                   ~6      'MCRYPT_BLOWFISH'
+         7        SEND_VAL                                                 ~6
+         8        SEND_VAR                                                 !1
+         9        SEND_VAR                                                 !0
+        10        FETCH_CONSTANT                                   ~7      'MCRYPT_MODE_CBC'
+        11        SEND_VAL                                                 ~7
+        12        SEND_VAR                                                 !2
+        13        DO_FCALL                                      5  $8      'mcrypt_encrypt'
+        14        SEND_VAR_NO_REF                               6          $8
+        15        DO_FCALL                                      1  $9      'base64_encode'
+        16      > RETURN                                                   $9
+  10    17*     > RETURN                                                   null
+
+branch: #  0; line:     8-   10; sop:     0; eop:    17
+path #1: 0, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a09
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a15:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  7
+compiled vars:  !0 = $flag, !1 = $x
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  14     0  E >   RECV                                             !0      
+  15     1        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a176'
+  17     2        ASSIGN                                                   !1, ~0
+  18     3        INIT_FCALL_BY_NAME                                       !1
+         4        DO_FCALL_BY_NAME                              0  $2      
+         5        ECHO                                                     $2
+  19     6      > RETURN                                                   null
+
+branch: #  0; line:    14-   19; sop:     0; eop:     6; out1:  -2
+path #1: 0, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a15
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a17:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  4
+compiled vars:  !0 = $flag
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  15     0  E >   FETCH_W                      static              $0      'flag'
+         1        ASSIGN_REF                                               !0, $0
+  16     2      > RETURN                                                   !0
+  17     3*     > RETURN                                                   null
+
+branch: #  0; line:    15-   17; sop:     0; eop:     3
+path #1: 0, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a17
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a1c:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  36
+compiled vars:  !0 = $username, !1 = $password, !2 = $split2array
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  22     0  E >   FETCH_R                      global              $0      '_GET'
+         1        FETCH_DIM_R                                      $1      $0, 'username'
+         2        ASSIGN                                                   !0, $1
+  23     3        FETCH_R                      global              $3      '_GET'
+         4        FETCH_DIM_R                                      $4      $3, 'password'
+         5        ASSIGN                                                   !1, $4
+  24     6        SEND_VAR                                                 !0
+         7        DO_FCALL                                      1  $6      'is_array'
+         8      > JMPNZ_EX                                         ~7      $6, ->12
+         9    >   SEND_VAR                                                 !1
+        10        DO_FCALL                                      1  $8      'is_array'
+        11        BOOL                                             ~7      $8
+        12    > > JMPZ                                                     ~7, ->15
+  25    13    > > EXIT                                                     
+  26    14*       JMP                                                      ->15
+  27    15    >   SEND_VAR                                                 !0
+        16        DO_FCALL                                      1  $9      'strlen'
+        17        IS_NOT_EQUAL                                     ~10     $9, 16
+        18      > JMPNZ_EX                                         ~10     ~10, ->23
+        19    >   SEND_VAR                                                 !1
+        20        DO_FCALL                                      1  $11     'strlen'
+        21        IS_NOT_EQUAL                                     ~12     $11, 16
+        22        BOOL                                             ~10     ~12
+        23    > > JMPZ                                                     ~10, ->27
+  28    24    >   ECHO                                                     'sb%21'
+  29    25      > EXIT                                                     
+  30    26*       JMP                                                      ->27
+  31    27    >   DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a2d2'
+  33    28        ASSIGN                                                   !2, ~13
+  34    29        SEND_VAR                                                 !2
+        30        INIT_ARRAY                                       ~15     !0
+        31        ADD_ARRAY_ELEMENT                                ~15     !1
+        32        SEND_VAL                                                 ~15
+        33        DO_FCALL                                      2  $16     'array_map'
+        34      > RETURN                                                   $16
+  35    35*     > RETURN                                                   null
+
+branch: #  0; line:    22-   24; sop:     0; eop:     8; out1:   9; out2:  12
+branch: #  9; line:    24-   24; sop:     9; eop:    11; out1:  12
+branch: # 12; line:    24-   24; sop:    12; eop:    12; out1:  13; out2:  15
+branch: # 13; line:    25-   25; sop:    13; eop:    13; out1:  -2
+branch: # 15; line:    27-   27; sop:    15; eop:    18; out1:  19; out2:  23
+branch: # 19; line:    27-   27; sop:    19; eop:    22; out1:  23
+branch: # 23; line:    27-   27; sop:    23; eop:    23; out1:  24; out2:  27
+branch: # 24; line:    28-   29; sop:    24; eop:    25; out1:  -2
+branch: # 27; line:    31-   35; sop:    27; eop:    35
+path #1: 0, 9, 12, 13, 
+path #2: 0, 9, 12, 15, 19, 23, 24, 
+path #3: 0, 9, 12, 15, 19, 23, 27, 
+path #4: 0, 9, 12, 15, 23, 24, 
+path #5: 0, 9, 12, 15, 23, 27, 
+path #6: 0, 12, 13, 
+path #7: 0, 12, 15, 19, 23, 24, 
+path #8: 0, 12, 15, 19, 23, 27, 
+path #9: 0, 12, 15, 23, 24, 
+path #10: 0, 12, 15, 23, 27, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a1c
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a2d:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  6
+compiled vars:  !0 = $arg
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  31     0  E >   RECV                                             !0      
+  32     1        SEND_VAR                                                 !0
+         2        SEND_VAL                                                 4
+         3        DO_FCALL                                      2  $0      'str_split'
+         4      > RETURN                                                   $0
+  33     5*     > RETURN                                                   null
+
+branch: #  0; line:    31-   33; sop:     0; eop:     5
+path #1: 0, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a2d
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a36:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  48
+compiled vars:  !0 = $getUserInfo, !1 = $target1, !2 = $arrUserInfo, !3 = $arrUsername, !4 = $arrPassword, !5 = $getMinCount, !6 = $getStrLen, !7 = $checkStrLen, !8 = $checkStrValid, !9 = $getXorStr, !10 = $cnt, !11 = $serialNumber, !12 = $strUsername, !13 = $strPassword
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  37     0  E >   FETCH_R                      static              $0      'getUserInfo'
+         1        ASSIGN                                                   !0, $0
+         2        FETCH_R                      static              $2      'target1'
+         3        ASSIGN                                                   !1, $2
+  38     4        INIT_FCALL_BY_NAME                                       !0
+         5        DO_FCALL_BY_NAME                              0  $4      
+         6        ASSIGN                                                   !2, $4
+  39     7        FETCH_DIM_R                                      $6      !2, 0
+         8        ASSIGN                                                   !3, $6
+  40     9        FETCH_DIM_R                                      $8      !2, 1
+        10        ASSIGN                                                   !4, $8
+  42    11        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a407'
+  52    12        ASSIGN                                                   !5, ~10
+  54    13        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a5f5'
+  56    14        ASSIGN                                                   !6, ~12
+  58    15        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a652'
+  60    16        ASSIGN                                                   !7, ~14
+  62    17        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a6c2'
+  68    18        ASSIGN                                                   !8, ~16
+  70    19        DECLARE_LAMBDA_FUNCTION                                  '%00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a798'
+  76    20        ASSIGN                                                   !9, ~18
+  78    21        ASSIGN                                                   !10, 0
+  79    22        ASSIGN                                                   !11, ''
+  80    23    >   INIT_FCALL_BY_NAME                                       !5
+        24        DO_FCALL_BY_NAME                              0  $22     
+        25        IS_SMALLER                                       ~23     !10, $22
+        26      > JMPZ                                                     ~23, ->43
+  81    27    >   FETCH_DIM_R                                      $24     !3, !10
+        28        ASSIGN                                                   !12, $24
+  82    29        FETCH_DIM_R                                      $26     !4, !10
+        30        ASSIGN                                                   !13, $26
+  83    31        INIT_FCALL_BY_NAME                                       !8
+        32        SEND_VAR                                                 !12
+        33        SEND_VAR                                                 !13
+        34        DO_FCALL_BY_NAME                              2          
+  84    35        INIT_FCALL_BY_NAME                                       !9
+        36        SEND_VAR                                                 !12
+        37        SEND_VAR                                                 !13
+        38        DO_FCALL_BY_NAME                              2  $29     
+        39        ASSIGN_CONCAT                                 0          !11, $29
+  85    40        POST_INC                                         ~31     !10
+        41        FREE                                                     ~31
+  86    42      > JMP                                                      ->23
+  88    43    >   IS_IDENTICAL                                     ~32     !11, 'ILoveAklisheheha'
+        44      > JMPZ                                                     ~32, ->47
+  89    45    >   ASSIGN                                                   !1, <bool>
+  90    46      > JMP                                                      ->47
+  91    47    > > RETURN                                                   null
+
+branch: #  0; line:    37-   80; sop:     0; eop:    22; out1:  23
+branch: # 23; line:    80-   80; sop:    23; eop:    26; out1:  27; out2:  43
+branch: # 27; line:    81-   86; sop:    27; eop:    42; out1:  23
+branch: # 43; line:    88-   88; sop:    43; eop:    44; out1:  45; out2:  47
+branch: # 45; line:    89-   90; sop:    45; eop:    46; out1:  47
+branch: # 47; line:    91-   91; sop:    47; eop:    47; out1:  -2
+path #1: 0, 23, 27, 23, 43, 45, 47, 
+path #2: 0, 23, 27, 23, 43, 47, 
+path #3: 0, 23, 43, 45, 47, 
+path #4: 0, 23, 43, 47, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a36
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a40:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  41
+compiled vars:  !0 = $arrUsername, !1 = $arrPassword
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  42     0  E >   FETCH_R                      static              $0      'arrUsername'
+         1        ASSIGN                                                   !0, $0
+         2        FETCH_R                      static              $2      'arrPassword'
+         3        ASSIGN                                                   !1, $2
+  43     4        SEND_VAL                                                 'getArrayLength'
+         5        DO_FCALL                                      1  $4      'function_exists'
+         6        BOOL_NOT                                         ~5      $4
+         7      > JMPZ                                                     ~5, ->10
+  44     8    >   DECLARE_FUNCTION                                         '%00getarraylength%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a469', 'getarraylength'
+  47     9      > JMP                                                      ->10
+  48    10    >   SEND_VAL                                                 'getArrayLength'
+        11        INIT_ARRAY                                       ~6      !0
+        12        ADD_ARRAY_ELEMENT                                ~6      !1
+        13        SEND_VAL                                                 ~6
+        14        DO_FCALL                                      2  $7      'array_map'
+        15        FETCH_DIM_R                                      $8      $7, 0
+  49    16        SEND_VAL                                                 'getArrayLength'
+        17        INIT_ARRAY                                       ~9      !0
+        18        ADD_ARRAY_ELEMENT                                ~9      !1
+        19        SEND_VAL                                                 ~9
+        20        DO_FCALL                                      2  $10     'array_map'
+        21        FETCH_DIM_R                                      $11     $10, 1
+        22        IS_SMALLER                                       ~12     $11, $8
+  50    23      > JMPZ                                                     ~12, ->32
+        24    >   SEND_VAL                                                 'getArrayLength'
+        25        INIT_ARRAY                                       ~13     !0
+        26        ADD_ARRAY_ELEMENT                                ~13     !1
+        27        SEND_VAL                                                 ~13
+        28        DO_FCALL                                      2  $14     'array_map'
+        29        FETCH_DIM_R                                      $15     $14, 0
+        30        QM_ASSIGN_VAR                                    $16     $15
+        31      > JMP                                                      ->39
+  51    32    >   SEND_VAL                                                 'getArrayLength'
+        33        INIT_ARRAY                                       ~17     !0
+        34        ADD_ARRAY_ELEMENT                                ~17     !1
+        35        SEND_VAL                                                 ~17
+        36        DO_FCALL                                      2  $18     'array_map'
+        37        FETCH_DIM_R                                      $19     $18, 1
+        38        QM_ASSIGN_VAR                                    $16     $19
+        39    > > RETURN                                                   $16
+  52    40*     > RETURN                                                   null
+
+branch: #  0; line:    42-   43; sop:     0; eop:     7; out1:   8; out2:  10
+branch: #  8; line:    44-   47; sop:     8; eop:     9; out1:  10
+branch: # 10; line:    48-   50; sop:    10; eop:    23; out1:  24; out2:  32
+branch: # 24; line:    50-   50; sop:    24; eop:    31; out1:  39
+branch: # 32; line:    51-   51; sop:    32; eop:    38; out1:  39
+branch: # 39; line:    51-   52; sop:    39; eop:    40
+path #1: 0, 8, 10, 24, 39, 
+path #2: 0, 8, 10, 32, 39, 
+path #3: 0, 10, 24, 39, 
+path #4: 0, 10, 32, 39, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a40
+
+Function %00getarraylength%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a46:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  getArrayLength
+number of ops:  5
+compiled vars:  !0 = $arg
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  44     0  E >   RECV                                             !0      
+  45     1        SEND_VAR                                                 !0
+         2        DO_FCALL                                      1  $0      'count'
+         3      > RETURN                                                   $0
+  46     4*     > RETURN                                                   null
+
+branch: #  0; line:    44-   46; sop:     0; eop:     4
+path #1: 0, 
+End of function %00getarraylength%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a46
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a5f:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  12
+compiled vars:  !0 = $arg
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  54     0  E >   RECV                                             !0      
+  55     1        SEND_VAR                                                 !0
+         2        DO_FCALL                                      1  $0      'is_array'
+         3      > JMPZ                                                     $0, ->7
+         4    > > EXIT                                                     
+         5*       QM_ASSIGN_VAR                                    $1      <bool>
+         6*       JMP                                                      ->10
+         7    >   SEND_VAR                                                 !0
+         8        DO_FCALL                                      1  $2      'strlen'
+         9        QM_ASSIGN_VAR                                    $1      $2
+        10      > RETURN                                                   $1
+  56    11*     > RETURN                                                   null
+
+branch: #  0; line:    54-   55; sop:     0; eop:     3; out1:   4; out2:   7
+branch: #  4; line:    55-   55; sop:     4; eop:     4; out1:  -2
+branch: #  7; line:    55-   56; sop:     7; eop:    11
+path #1: 0, 4, 
+path #2: 0, 7, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a5f
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a65:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  13
+compiled vars:  !0 = $arg, !1 = $getStrLen
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  58     0  E >   RECV                                             !0      
+         1        FETCH_R                      static              $0      'getStrLen'
+         2        ASSIGN                                                   !1, $0
+  59     3        INIT_FCALL_BY_NAME                                       !1
+         4        SEND_VAR                                                 !0
+         5        DO_FCALL_BY_NAME                              1  $2      
+         6        IS_EQUAL                                         ~3      $2, 4
+         7      > JMPZ                                                     ~3, ->10
+         8    >   QM_ASSIGN                                        ~4      <bool>
+         9      > JMP                                                      ->11
+        10    >   QM_ASSIGN                                        ~4      <bool>
+        11    > > RETURN                                                   ~4
+  60    12*     > RETURN                                                   null
+
+branch: #  0; line:    58-   59; sop:     0; eop:     7; out1:   8; out2:  10
+branch: #  8; line:    59-   59; sop:     8; eop:     9; out1:  11
+branch: # 10; line:    59-   59; sop:    10; eop:    10; out1:  11
+branch: # 11; line:    59-   60; sop:    11; eop:    12
+path #1: 0, 8, 11, 
+path #2: 0, 10, 11, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a65
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a6c:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  22
+compiled vars:  !0 = $username, !1 = $password, !2 = $checkStrLen, !3 = $key, !4 = $value
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  62     0  E >   RECV                                             !0      
+         1        RECV                                             !1      
+         2        FETCH_R                      static              $0      'checkStrLen'
+         3        ASSIGN                                                   !2, $0
+  63     4        SEND_VAR                                                 !2
+         5        INIT_ARRAY                                       ~2      !0
+         6        ADD_ARRAY_ELEMENT                                ~2      !1
+         7        SEND_VAL                                                 ~2
+         8        DO_FCALL                                      2  $3      'array_map'
+         9        NOP                                                      
+        10      > FE_RESET                                         $4      $3, ->20
+        11    > > FE_FETCH                                         $5      $4, ->20
+        12    >   OP_DATA                                          ~7      
+        13        ASSIGN                                                   !4, $5
+        14        ASSIGN                                                   !3, ~7
+  64    15        BOOL_NOT                                         ~9      !4
+        16      > JMPZ                                                     ~9, ->19
+  65    17    > > EXIT                                                     
+  66    18*       JMP                                                      ->19
+  67    19    > > JMP                                                      ->11
+        20    >   SWITCH_FREE                                              $4
+  68    21      > RETURN                                                   null
+
+branch: #  0; line:    62-   63; sop:     0; eop:    10; out1:  11; out2:  20
+branch: # 11; line:    63-   63; sop:    11; eop:    11; out1:  12; out2:  20
+branch: # 12; line:    63-   64; sop:    12; eop:    16; out1:  17; out2:  19
+branch: # 17; line:    65-   65; sop:    17; eop:    17; out1:  -2
+branch: # 19; line:    67-   67; sop:    19; eop:    19; out1:  11
+branch: # 20; line:    67-   68; sop:    20; eop:    21; out1:  -2
+path #1: 0, 11, 12, 17, 
+path #2: 0, 11, 12, 19, 11, 20, 
+path #3: 0, 11, 20, 
+path #4: 0, 20, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a6c
+
+Function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a79:
+filename:       /tmp/flagflagflaggogogo.php
+function name:  {closure}
+number of ops:  18
+compiled vars:  !0 = $arg1, !1 = $arg2, !2 = $xoredStr, !3 = $i
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  70     0  E >   RECV                                             !0      
+         1        RECV                                             !1      
+  71     2        ASSIGN                                                   !2, ''
+  72     3        ASSIGN                                                   !3, 0
+         4    >   SEND_VAR                                                 !0
+         5        DO_FCALL                                      1  $2      'strlen'
+         6        IS_SMALLER                                       ~3      !3, $2
+         7      > JMPZNZ                                       11          ~3, ->16
+         8    >   POST_INC                                         ~4      !3
+         9        FREE                                                     ~4
+        10      > JMP                                                      ->4
+  73    11    >   FETCH_DIM_R                                      $5      !0, !3
+        12        FETCH_DIM_R                                      $6      !1, !3
+        13        BW_XOR                                           ~7      $5, $6
+        14        ASSIGN_CONCAT                                 0          !2, ~7
+  74    15      > JMP                                                      ->8
+  75    16    > > RETURN                                                   !2
+  76    17*     > RETURN                                                   null
+
+branch: #  0; line:    70-   72; sop:     0; eop:     3; out1:   4
+branch: #  4; line:    72-   72; sop:     4; eop:     7; out1:  16; out2:  11
+branch: #  8; line:    72-   72; sop:     8; eop:    10; out1:   4
+branch: # 11; line:    73-   74; sop:    11; eop:    15; out1:   8
+branch: # 16; line:    75-   76; sop:    16; eop:    17
+path #1: 0, 4, 16, 
+path #2: 0, 4, 11, 8, 4, 16, 
+End of function %00%7Bclosure%7D%2Ftmp%2Fflagflagflaggogogo.php0x7f1ac9d6a79
