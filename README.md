@@ -2,7 +2,7 @@
 hctf2015 all problems and writeups from authors
 
 #  Writeups
-###  https://github.com/hduisa/hctf2015-all-problems/tree/master/injection
+###  https://github.com/hduisa/hctf2015-all-problems/tree/master/Writeup
 所有发在这里的writeup都经过队伍授权，如果在这里找不到，请自行寻找他们发在其它地方的文章
 
 --------------------------------------------------------------------
