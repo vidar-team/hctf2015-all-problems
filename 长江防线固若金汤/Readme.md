@@ -14,8 +14,18 @@ down下来文件会发现所有图片都会被缩放成64*64，如果上传64*64
 
 构造缩放后能够出现webshell的正常png图片，在上传之后会输出到upload.php
 
-之前还有两个坑，一个是重命名后的文件名，还有一个是filename如果包含`'`会强行报错
+之前还有两个坑，一个是重命名后的文件名，还有一个是filename如果包含`'`会强行echo报错(XD
 
-不过老赛棍都能一眼看出来
+不过老赛棍都能一眼看出来是个坑
+
+在出题之后出题人才发现这篇文章freebuf已经有了翻译，所以把缩放大小改成了64
+
+并且删除了原题目中2s清空upload的sh脚本，保留了上传太快会暴露重命名后的图片名
+
+这道题目直到最后一天上午只有4支队伍开出来，导致很多队伍没有时间做题，所以最终没有队伍做出来
+
+
+
+Referer:[https://www.idontplaydarts.com/2012/06/encoding-web-shells-in-png-idat-chunks/](https://www.idontplaydarts.com/2012/06/encoding-web-shells-in-png-idat-chunks/)
 
 
