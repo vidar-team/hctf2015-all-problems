@@ -1,6 +1,6 @@
 <?php
 
-        $connection = new Mongo("mongodb://admin:supperadmin@120.26.93.115:10000");
+        $connection = new Mongo("mongodb://nicai:suppernicai@120.26.93.115:10000");
 
         $db = $connection -> HCTF;
 	      $collection = $db -> login;
